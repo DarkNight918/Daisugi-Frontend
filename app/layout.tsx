@@ -1,6 +1,5 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import SnackBar from '@/components/SnackBarComponent';
 import { Providers } from '@/redux/provider';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +19,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           {children}
-          <SnackBar />
         </Providers>
       </body>
     </html>
