@@ -83,6 +83,7 @@ const Coins = () => {
             />
           </XBox>
         </Link>
+        
         <Link href="/coins/trading">
           <XBox isBackground={true} header="Social Insights">
             {
