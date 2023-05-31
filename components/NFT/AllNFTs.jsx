@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-import { API_BASE } from "../../config/constants";
-import { coinPriceFormat, marketCapFormat } from "../../utils/format";
+import { API_BASE } from "@/config/constants";
+import { coinPriceFormat, marketCapFormat } from "@/utils/format";
 import DaisugiTable from "../DaisugiTable";
 import ReactPaginate from "react-paginate";
 

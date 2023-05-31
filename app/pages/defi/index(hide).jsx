@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import LineChart from "../../components/Charts/LineChart";
-import DaisugiTable from "../../components/DaisugiTable";
-import ProgressBar from "../../components/ProgressBar";
+import Layout from "@/components/Layout";
+import LineChart from "@/components/Charts/LineChart";
+import DaisugiTable from "@/components/DaisugiTable";
+import ProgressBar from "@/components/ProgressBar";
 
 const labels = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5,

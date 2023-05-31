@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 
 const EconomicList = ({imgURL, name, symbol, time, location}) => {

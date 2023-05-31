@@ -1,10 +1,11 @@
+"use client"
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDiscord,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { chainImages } from '../../data/chain'
+import { chainImages } from '@/app/data/chain'
 
 const NFTCalendarBox = ({imgURL, title, description, networks, month, day, time, price, supply}) => {
   return (

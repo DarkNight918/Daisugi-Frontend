@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from "next/link";
 
 const Intro = () => {
   return (
@@ -10,7 +10,7 @@ const Intro = () => {
           <Link><div className='text-[14px] tracking-[.05em] text-gray-300 hover:text-white transition ease-in-out hidden sm:block'>HOW-TO</div></Link>
           <Link><div className='text-[14px] tracking-[.05em] text-gray-300 hover:text-white transition ease-in-out hidden sm:block'>CAREER</div></Link>
           <Link><div className='text-[14px] tracking-[.05em] text-gray-300 hover:text-white transition ease-in-out hidden sm:block'>ABOUT</div></Link>
-          <Link to="/home"><div className='py-2 px-6 rounded-md px-8 duration-300 transition cursor-pointer ease-in-out text-[14px] hover:opacity-[0.8]' style={{background: 'radial-gradient(100% 341.37% at 0% 24.29%, #5C1693 0%, #201DAD 100%)'}}>Get Started</div></Link>
+          <Link href="/home"><div className='py-2 px-6 rounded-md px-8 duration-300 transition cursor-pointer ease-in-out text-[14px] hover:opacity-[0.8]' style={{background: 'radial-gradient(100% 341.37% at 0% 24.29%, #5C1693 0%, #201DAD 100%)'}}>Get Started</div></Link>
         </div> */}
       </div>
       <div className='mt-4 justify-center items-center flex flex-col gap-6'>
@@ -21,7 +21,7 @@ const Intro = () => {
           Gain a competitive edge with Daisugi the ultimate cross-chain trading terminal.
         </div>
         <div>
-          <Link to="/home">
+          <Link href="/home">
             <button className='text-sm font-semibold text-black bg-white px-6 py-3 rounded-md cursor-pointer transition ease-in-out duration-300 hover:opacity-[0.8]' style={{background: 'radial-gradient(100% 341.37% at 0% 24.29%, #FFFFFF 0%, #C8C8C8 100%)'}} >GET STARTED</button>
           </Link>
         </div>

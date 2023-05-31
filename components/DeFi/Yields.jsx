@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import DaisugiTable from "../DaisugiTable";
-import { API_BASE } from "../../config/constants";
+import { API_BASE } from "@/config/constants";
 import ImageWithFallback from "../ImageWithFallback";
-import { marketCapFormat, normalPercentFormat } from "../../utils/format";
-import { chainImages } from "../../data/chain";
+import { marketCapFormat, normalPercentFormat } from "@/utils/format";
+import { chainImages } from "@/data/chain";
 
 const filter = {
   showCount: [25, 50, 100],

@@ -1,5 +1,6 @@
+"use client"
 import { createSlice } from "@reduxjs/toolkit";
-import { userService } from '../services/users.service'
+import { userService } from '@/app/services/users.service'
 import { openSnackBar } from "./snackBarReducer";
 
 let userToken = localStorage.getItem('user')? JSON.parse(localStorage.getItem('user')) : null;

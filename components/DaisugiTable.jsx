@@ -1,3 +1,4 @@
+"use client"
 import { Default } from "react-awesome-spinners";
 
 const Table = ({ tableOption = {}, tableData, isLoading }) => {

@@ -1,6 +1,6 @@
-import { handleResponse } from '../utils';
+import { handleResponse } from '@/utils';
 import axios from 'axios';
-import { API_BASE } from '../config/constants';
+import { API_BASE } from '@/constants/constants';
 
 export const getIntheBlockCoinData = async (coinName) => {
 

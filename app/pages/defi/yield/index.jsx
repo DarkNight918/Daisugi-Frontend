@@ -1,6 +1,6 @@
 import React from "react";
-import Yields from "../../../components/DeFi/Yields";
-import Layout from "../../../components/Layout";
+import Yields from "@/components/DeFi/Yields";
+import Layout from "@/components/Layout";
 
 
 const Yield = () => {

@@ -1,9 +1,10 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ImageWithFallback from "../ImageWithFallback";
-import { API_BASE } from "../../config/constants";
-import { chains } from "../../data/chain";
-import { coinPriceFormat } from "../../utils/format";
+import { API_BASE } from "@/constants/constants";
+import { chains } from "@/app//data/chain";
+import { coinPriceFormat } from "@/utils/format";
 import { Default } from "react-awesome-spinners";
 
 const TrendingCoins = () => {

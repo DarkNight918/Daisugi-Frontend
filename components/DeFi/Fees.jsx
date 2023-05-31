@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { API_BASE } from "../../config/constants";
-import { marketCapFormat } from "../../utils/format";
+import { API_BASE } from "@/config/constants";
+import { marketCapFormat } from "@/utils/format";
 import DaisugiTable from "../DaisugiTable";
 import ReactPaginate from "react-paginate";
 import ImageWithFallback from "../ImageWithFallback";
-import { chainImages } from "../../data/chain";
+import { chainImages } from "@/data/chain";
 
 const columns = [
   {

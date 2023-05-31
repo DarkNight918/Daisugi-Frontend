@@ -1,3 +1,4 @@
+"use client"
 import { selectSnackState, selectSnackMessage, selectSnackStatus, closeSnackBar } from "../redux/snackBarReducer";
 import Snackbar from '@material-ui/core/Snackbar'
 import MuiAlert from '@material-ui/lab/Alert'

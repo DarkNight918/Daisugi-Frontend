@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Layout from "../../../components/Layout";
-import Chains from "../../../components/DeFi/Chains";
-import Protocols from "../../../components/DeFi/Protocols";
+import Layout from "@/components/Layout";
+import Chains from "@/components/DeFi/Chains";
+import Protocols from "@/components/DeFi/Protocols";
 
 const DeFiTVL = () => {
   const [category, setCategory] = useState(0);

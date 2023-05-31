@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 
 const ImageWithFallback = ({ src, fallback, alt, ...props }) => {

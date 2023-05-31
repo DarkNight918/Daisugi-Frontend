@@ -1,5 +1,5 @@
-import  { handleResponse } from '../utils';
-import { API_BASE } from '../config/constants';
+import  { handleResponse } from '@/utils';
+import { API_BASE } from '@/constants/constants';
 
 const login = async (email, password) => {
     const requestOptions = {

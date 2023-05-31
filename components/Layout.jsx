@@ -1,5 +1,8 @@
+"use client"
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+// import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEllipsisH,
@@ -43,6 +46,7 @@ const activeLinkStyle = {
 };
 
 const Layout = ({ children }) => {
+  const router = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isSocialSlidebarCollapsed, setIsSocialSlideBarCollapsed] =
@@ -50,16 +54,15 @@ const Layout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedSocial, setSelectedSocial] = useState("");
   const leftBarRef = useRef();
-  const location = useLocation();
 
   useEffect(() => {
-    setActiveMenu(location.pathname);
+    setActiveMenu(router);
     preventBodyScroll();
     handleResize();
     addEventListeners();
 
     return removeEventListeners;
-  }, [location]);
+  }, [router]);
 
   useEffect(() => {
     handleResize();
@@ -109,20 +112,20 @@ const Layout = ({ children }) => {
   };
 
   const menuItems = [
-    { path: "/home", label: "Home" },
-    { path: "/pins", label: "Pins" },
-    { path: "/coins", label: "Coins" },
-    { path: "/defi", label: "DeFi" },
-    { path: "/exchange", label: "Exchange" },
-    { path: "/nft", label: "NFT" },
+    { path: "/pages/home", label: "Home" },
+    { path: "/pages/pins", label: "Pins" },
+    { path: "/pages/coins", label: "Coins" },
+    { path: "/pages/defi", label: "DeFi" },
+    { path: "/pages/exchange", label: "Exchange" },
+    { path: "/pages/nft", label: "NFT" },
     // { path: "/dapp", label: "Dapp" },
     // { path: "/dao", label: "Dao" },
-    { path: "/news", label: "News" },
-    { path: "/videos", label: "Videos" },
-    { path: "/directory", label: "Directory" },
-    { path: "/calendar", label: "Calendar" },
-    { path: "/learning", label: "Learning" },
-    { path: "/research", label: "Research" },
+    { path: "/pages/news", label: "News" },
+    { path: "/pages/videos", label: "Videos" },
+    { path: "/pages/directory", label: "Directory" },
+    { path: "/pages/calendar", label: "Calendar" },
+    { path: "/pages/learning", label: "Learning" },
+    { path: "/pages/research", label: "Research" },
   ];
 
   const SocialData = [
@@ -200,7 +203,7 @@ const Layout = ({ children }) => {
           <div className="overflow-y-auto">
             {menuItems &&
               menuItems.map(({ path, label }) => (
-                <Link key={path} to={path}>
+                <Link key={path} href={path}>
                   <div
                     className={`cursor-pointer transition ease-in-out duration-300 hover:text-white rounded-lg p-3 
                       ${

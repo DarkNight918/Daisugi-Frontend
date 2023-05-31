@@ -2,8 +2,8 @@ import React from "react";
 import {
   coinPriceFormat,
   normalPercentFormat,
-} from "../../utils/format";
-import { chainImages } from '../../data/chain'
+} from "@/utils/format";
+import { chainImages } from '@/app/data/chain'
 
 const NFTListBox = ({ imgURL, name, networks, price, changed }) => {
   return (

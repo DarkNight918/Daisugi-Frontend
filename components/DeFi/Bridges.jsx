@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import DaisugiTable from "../DaisugiTable";
-import { API_BASE } from "../../config/constants";
-import { marketCapFormat } from "../../utils/format";
+import { API_BASE } from "@/config/constants";
+import { marketCapFormat } from "@/utils/format";
 
 const filter = {
   showCount: [25, 50, 100],

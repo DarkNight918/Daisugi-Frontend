@@ -1,9 +1,10 @@
+"use client"
 import React from "react";
 import {
   percentFormat,
   coinPriceFormat,
   normalPercentFormat,
-} from "../../utils/format";
+} from "@/utils/format";
 
 const CoinListBox = ({ imgURL, name, symbol, price, changed, type }) => {
   return (
