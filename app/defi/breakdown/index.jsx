@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 
 const DeFiFee = () => {
   return (
-    <Layout>
-    </Layout>
+    <>
+    </>
   );
 };
 

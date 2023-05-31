@@ -24,7 +24,6 @@ const Home = () => {
   }, [])
 
   return (
-    <Layout>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 2xl:grid-cols-3">
         <div className="flex flex-col gap-[10px]">
           <SmallChartCard
@@ -148,7 +147,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </Layout>
   );
 };
 

@@ -4,7 +4,7 @@ import Layout from '@/components/Layout'
 const Dapp = () => {
 
   return (
-    <Layout>
+    <>
       <div className='w-full'>
         <div className='flex items-center'>
           <input className='bg-black p-4 rounded-md w-[500px] text-white outline-0 border-0 mx-auto flex' placeholder='Search by name, type & more' />
@@ -31,7 +31,7 @@ const Dapp = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

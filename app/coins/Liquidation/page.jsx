@@ -160,7 +160,7 @@ const Liquidation = () => {
   };
 
   return (
-    <Layout>
+    <>
       {/* Filter */}
       <div>
         <h3 className="p-5 text-white text-xl">Liquidation</h3>
@@ -237,7 +237,7 @@ const Liquidation = () => {
           disabledLinkClassName="brightness-75 hover:brightness-75 hover:cursor-not-allowed"
         />
       </div>
-    </Layout>
+    </>
   );
 };
 

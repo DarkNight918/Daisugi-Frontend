@@ -9,7 +9,7 @@ import { TopCollections, TopMarketPlaces, TrendCollections, Mints, CrossChains, 
 const NFT = () => {
 
   return (
-    <Layout>
+    <>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         <Link href="/nft/top">
           <XBox isBackground={true} header="Top Collections">
@@ -110,7 +110,7 @@ const NFT = () => {
           </XBox>
         </Link>
       </div>
-    </Layout>
+    </>
   )
 }
 

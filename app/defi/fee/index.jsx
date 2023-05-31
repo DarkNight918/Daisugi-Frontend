@@ -4,9 +4,9 @@ import Fees from "@/components/DeFi/Fees";
 
 const DeFiFee = () => {
   return (
-    <Layout>
+    <>
         <Fees/>
-    </Layout>
+    </>
   );
 };
 

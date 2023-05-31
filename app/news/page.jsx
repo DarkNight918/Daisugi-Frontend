@@ -8,7 +8,7 @@ const News = () => {
   const [rankType, setRankType] = useState(0)
 
   return (
-    <Layout>
+    <>
       <div
         className='px-10 py-5 text-[42px] text-white bg-cover bg-no-repeat'
         style={{ backgroundImage: 'url(/img/news/bg.png)' }}
@@ -46,7 +46,7 @@ const News = () => {
           ))
         }
       </div>
-    </Layout>
+    </>
   )
 }
 

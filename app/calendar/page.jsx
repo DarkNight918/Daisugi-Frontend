@@ -9,7 +9,6 @@ import { NFTmints, Economics, Events, IDO, MajorEvents } from './data'
 const Calendar = () => {
 
   return (
-    <Layout>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         <XBox isBackground={true} header="NFT Mints">
           <div className='flex flex-col gap-4'>
@@ -93,7 +92,6 @@ const Calendar = () => {
           }
         </XBox>
       </div>
-    </Layout>
   )
 }
 

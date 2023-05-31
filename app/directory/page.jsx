@@ -8,7 +8,7 @@ import InvestListBox from "@/components/InvestListBox";
 
 const Directory = () => {
   return (
-    <Layout>
+    <>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         <XBox isBackground={true} center={true} header="Reviews & Product">
           <div className="grid grid-cols-2 gap-3">
@@ -83,7 +83,7 @@ const Directory = () => {
           }
         </XBox>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -9,7 +9,6 @@ const CoinRank = () => {
   const [category, setCategory] = useState(0);
 
   return (
-    <Layout>
       <div>
         <div className="flex gap-6 items-center">
           <span className="text-xl text-white">Coins</span>
@@ -54,7 +53,6 @@ const CoinRank = () => {
           {category === 2 && <TrendingCoins />}
         </div>
       </div>
-    </Layout>
   );
 };
 
