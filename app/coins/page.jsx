@@ -27,7 +27,6 @@ const Coins = () => {
   }, []);
 
   return (
-    <Layout>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         <Link href="/coins/rank">
           <XBox isBackground={true} header="Coins" isLoading={isLoading}>
@@ -83,7 +82,7 @@ const Coins = () => {
             />
           </XBox>
         </Link>
-        
+
         <Link href="/coins/trading">
           <XBox isBackground={true} header="Social Insights">
             {
@@ -118,7 +117,6 @@ const Coins = () => {
           </XBox>
         </Link>
       </div>
-    </Layout>
   );
 };
 

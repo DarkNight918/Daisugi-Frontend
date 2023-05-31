@@ -459,7 +459,7 @@ const tableData = {
 
 const DeFi = () => {
   return (
-    <Layout>
+    <>
       {/* Line Chart Cards */}
       <div className="flex w-full">
         <div className="p-5 w-1/2">
@@ -570,7 +570,7 @@ const DeFi = () => {
       <div className="mt-8 overflow-x-auto">
         <DaisugiTable tableData={tableData} />
       </div>
-    </Layout>
+    </>
   );
 };
 

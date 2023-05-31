@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Homepage from '@/app/home/page';
+import Dashboard from '@/app/dashboard/page';
 
 export default function Home() {
   return (
-    <Homepage></Homepage>
+    <Dashboard></Dashboard>
   )
 }

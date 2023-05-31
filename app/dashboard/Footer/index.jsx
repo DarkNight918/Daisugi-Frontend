@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,22 +11,22 @@ const Footer = () => {
         <div className="flex gap-24 mt-12">
           <div className="flex flex-col gap-4">
             <p className="text-gray-400 font-semibold">Quick Links</p>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Home
               </p>
             </Link>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Blog
               </p>
             </Link>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Pricing
               </p>
             </Link>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Help Center
               </p>
@@ -32,17 +34,17 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <p className="text-gray-400 font-semibold">Company</p>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Career
               </p>
             </Link>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 About
               </p>
             </Link>
-            <Link>
+            <Link href="/">
               <p className="text-white hover:opacity-[0.4] transition ease-in-out font-semibold">
                 Join us
               </p>

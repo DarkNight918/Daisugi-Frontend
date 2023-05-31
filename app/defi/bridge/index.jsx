@@ -5,9 +5,9 @@ import Bridges from "@/components/DeFi/Bridges";
 const Bridge = () => {
 
   return (
-    <Layout>
+    <>
       <Bridges />
-    </Layout>
+    </>
   )
 }
 

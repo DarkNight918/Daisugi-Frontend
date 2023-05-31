@@ -7,7 +7,7 @@ import { ResearchBoxes } from './data'
 const Research = () => {
 
   return (
-    <Layout>
+    <>
       <div className='w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
         {
           ResearchBoxes.map((item, index) => (
@@ -43,7 +43,7 @@ const Research = () => {
           ))
         }
       </div>
-    </Layout>
+    </>
   )
 }
 

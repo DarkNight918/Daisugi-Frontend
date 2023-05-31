@@ -49,7 +49,7 @@ const filter = {
 const Exchange = () => {
 
   return (
-    <Layout>
+    <>
       <div>
         <h3 className="p-5 text-white text-xl">Exchange</h3>
         <div className="flex w-full justify-between">
@@ -157,7 +157,7 @@ const Exchange = () => {
           charData={[3, 5, 2, 1, 5, 3, 6, 2, 3, 5, 2, 1, 5, 9]}
         />
       </div>
-    </Layout>
+    </>
   );
 };
 

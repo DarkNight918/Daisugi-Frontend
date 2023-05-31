@@ -5,7 +5,7 @@ import { VideosData } from "./data";
 
 const DeFi = () => {
   return (
-    <Layout>
+    <>
       {/* <div className="flex w-full">
         <div className="w-1/2 m-5 rounded-lg bg-gradient-image">
           <div className="flex justify-between px-8 py-8">
@@ -133,7 +133,7 @@ const DeFi = () => {
           ))
         }
       </div>
-    </Layout>
+    </>
   );
 };
 

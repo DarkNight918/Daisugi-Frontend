@@ -89,7 +89,7 @@ const tableData = {
 
 const DeFi = () => {
   return (
-    <Layout>
+    <>
       {/* Line Chart Cards */}
       <div className="flex w-full">
         <div className="w-1/2 m-5 rounded-lg bg-gradient-image">
@@ -196,7 +196,7 @@ const DeFi = () => {
       <div>
         <DaisugiTable tableData={tableData} />
       </div>
-    </Layout>
+    </>
   );
 };
 

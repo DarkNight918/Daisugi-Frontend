@@ -1,6 +1,9 @@
+"use client"
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from '@/redux/provider';
+import Layout from "@/components/Layout";
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,11 +17,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+  console.log(pathname);
+  
   return (
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          {children}
+          {
+            pathname !== '/' ?
+              <Layout>
+                {children}
+              </Layout>
+              :
+              <>
+                {children}
+              </>
+          }
         </Providers>
       </body>
     </html>

@@ -5,7 +5,7 @@ import ChartCard from "@/components/Cards/ChartCard";
 
 const Pins = () => {
   return (
-    <Layout>
+    <>
       <div className="flex justify-between items-center">
         <div className="text-white text-xl">Your Pins</div>
         <div className="text-white px-5 py-3 cursor-pointer bg-[#212121] mr-10 rounded-lg transition hover:bg-gray-600">
@@ -114,7 +114,7 @@ const Pins = () => {
           />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

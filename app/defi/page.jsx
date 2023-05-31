@@ -27,7 +27,7 @@ const DeFiTVL = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         <Link href="/coins/liquidation">
           <XBox gap={true} header="Overview TVL">
@@ -146,7 +146,7 @@ const DeFiTVL = () => {
           </XBox>
         </Link>
       </div>
-    </Layout>
+    </>
   );
 };
 

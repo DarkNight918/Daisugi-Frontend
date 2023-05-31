@@ -7,7 +7,7 @@ import { LearnData } from "./data";
 const Learning = () => {
 
   return (
-    <Layout>
+    <>
       <div className="flex gap-10 flex-wrap justify-center">
         {
           LearnData.map((item, index) => {
@@ -22,7 +22,7 @@ const Learning = () => {
             )})
         }
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -7,7 +7,7 @@ const DeFiTVL = () => {
   const [category, setCategory] = useState(0);
 
   return (
-    <Layout>
+    <>
       <div>
         <div className="flex gap-6 items-center">
           <span className="text-xl text-white">TVL Data</span>
@@ -35,7 +35,7 @@ const DeFiTVL = () => {
           {category === 1 && <Protocols />}
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 
