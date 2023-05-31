@@ -112,20 +112,20 @@ const Layout = ({ children }) => {
   };
 
   const menuItems = [
-    { path: "/pages/home", label: "Home" },
-    { path: "/pages/pins", label: "Pins" },
-    { path: "/pages/coins", label: "Coins" },
-    { path: "/pages/defi", label: "DeFi" },
-    { path: "/pages/exchange", label: "Exchange" },
-    { path: "/pages/nft", label: "NFT" },
+    { path: "/home", label: "Home" },
+    { path: "/pins", label: "Pins" },
+    { path: "/coins", label: "Coins" },
+    { path: "/defi", label: "DeFi" },
+    { path: "/exchange", label: "Exchange" },
+    { path: "/nft", label: "NFT" },
     // { path: "/dapp", label: "Dapp" },
     // { path: "/dao", label: "Dao" },
-    { path: "/pages/news", label: "News" },
-    { path: "/pages/videos", label: "Videos" },
-    { path: "/pages/directory", label: "Directory" },
-    { path: "/pages/calendar", label: "Calendar" },
-    { path: "/pages/learning", label: "Learning" },
-    { path: "/pages/research", label: "Research" },
+    { path: "/news", label: "News" },
+    { path: "/videos", label: "Videos" },
+    { path: "/directory", label: "Directory" },
+    { path: "/calendar", label: "Calendar" },
+    { path: "/learning", label: "Learning" },
+    { path: "/research", label: "Research" },
   ];
 
   const SocialData = [
