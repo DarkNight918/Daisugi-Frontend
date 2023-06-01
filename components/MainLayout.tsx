@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, FC, ReactNode } from "react";
 // import { Link, useLocation } from "react-router-dom";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
@@ -45,7 +45,21 @@ const activeLinkStyle = {
   fontSize: "1.5rem",
 };
 
-const Layout = ({ children }) => {
+type MenuItem = {
+  path: string;
+  label: string;
+}
+
+type SocialItem = {
+  category: string;
+  component: JSX.Element;
+}
+
+type LayoutProps = {
+  children: ReactNode;
+}
+
+const Layout: FC<LayoutProps> = ({ children }) => {
   const router = usePathname();
   const [activeMenu, setActiveMenu] = useState("");
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -53,7 +67,7 @@ const Layout = ({ children }) => {
     useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedSocial, setSelectedSocial] = useState("");
-  const leftBarRef = useRef();
+  const leftBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setActiveMenu(router);
@@ -105,7 +119,7 @@ const Layout = ({ children }) => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
-  const handleSocialIconClick = (social) => (e) => {
+  const handleSocialIconClick = (social: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     setIsSocialSlideBarCollapsed(!isSocialSlidebarCollapsed);
     setSelectedSocial(social);

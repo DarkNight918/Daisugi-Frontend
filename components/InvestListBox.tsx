@@ -1,8 +1,15 @@
 "use client"
-import React from 'react'
+import { FC } from 'react'
 import { coinPriceFormat } from '../utils/format';
 
-const InvestListBox = ({name, round, price, date}) => {
+type InvestListProps = {
+  name: string;
+  round: string;
+  price: number;
+  date: string;
+}
+
+const InvestListBox: FC<InvestListProps> = ({name, round, price, date}) => {
   return (
     <div className="flex justify-between mt-2 items-center">
       <div className="flex gap-3 items-center">

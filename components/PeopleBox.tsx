@@ -1,7 +1,15 @@
 "use client"
-import React from 'react'
+import { FC } from 'react'
 
-const PeopleBox = ({name, imgURL, role, company, companyLogo}) => {
+type PeopleBoxProps = {
+  name: string;
+  imgURL: string;
+  role: string;
+  company: string;
+  companyLogo: string;
+}
+
+const PeopleBox: FC<PeopleBoxProps> = ({name, imgURL, role, company, companyLogo}) => {
   return (
     <div className="flex gap-2 items-center">
       <div className="relative">

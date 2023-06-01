@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ImageWithFallback from "../ImageWithFallback";
 import { API_BASE } from "@/constants/constants";
-import { chains } from "@/app//data/chain";
+import { chains } from "@/data/chain";
 import { coinPriceFormat } from "@/utils/format";
-import { Default } from "react-awesome-spinners";
 
 const TrendingCoins = () => {
   const [data, setData] = useState(null);
@@ -99,7 +98,7 @@ const TrendingCoins = () => {
     >
       {
         isLoading ?
-          <Default color="#a1a1a1" /> :
+          "" :
           renderCoins()
       }
     </div>

@@ -2,7 +2,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Daisugi',
+  title: 'Welcome to Daisugi',
   description: 'Analyze your Blockchain data Today',
 }
 

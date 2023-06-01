@@ -1,7 +1,24 @@
 "use client"
-import { Default } from "react-awesome-spinners";
 
-const Table = ({ tableOption = {}, tableData, isLoading }) => {
+import { FC } from 'react'
+
+type Column = {
+  header: string;
+  align: 'left' | 'right' | 'center';
+}
+
+type TableData = {
+  columns?: Column[];
+  rows?: (string | number)[][];
+}
+
+type TableProps = {
+  tableOption?: { footer?: boolean };
+  tableData: TableData;
+  isLoading: boolean;
+}
+
+const Table: FC<TableProps> = ({ tableOption = {}, tableData, isLoading }) => {
   return (
     <table className="w-full text-sm bg-[#262626]">
       <thead>
@@ -26,7 +43,7 @@ const Table = ({ tableOption = {}, tableData, isLoading }) => {
               colSpan={tableData.columns && tableData.columns.length}
               className="h-[calc(100vh-300px)] text-center"
             >
-              <Default color="#a1a1a1" />
+              {/* <Default color="#a1a1a1" /> */}
             </td>
           </tr>
         ) : (
@@ -41,9 +58,7 @@ const Table = ({ tableOption = {}, tableData, isLoading }) => {
                   return (
                     <td
                       key={i}
-                      className={`px-3 py-2 border border-[#313131] text-${
-                        tableData.columns[i] && tableData.columns[i].align
-                      }`}
+                      className={`px-3 py-2 border border-[#313131] text-${tableData.columns?.[i]?.align || 'left'}`}
                     >
                       {item}
                     </td>
