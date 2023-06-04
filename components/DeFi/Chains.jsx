@@ -51,7 +51,7 @@ const Chains = () => {
           newData.rows.push([
             showCountOption * currentPage + (key + 1),
             row.chainFullName,
-            <div className="flex items-center gap-4">
+            <div key={key} className="flex items-center gap-4">
               {row.chainShortName && (
                 <ImageWithFallback
                   src={`https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/32/${row.chainShortName.toLowerCase()}.png`}

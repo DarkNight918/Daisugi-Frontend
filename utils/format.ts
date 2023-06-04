@@ -1,7 +1,7 @@
 // Price formatting for each Type
 
 // Coin price type
-export const coinPriceFormat = (price) => {
+export const coinPriceFormat = (price: any) => {
   const num = parseFloat(price);
 
   if (num >= 1e8) { // 100,000,000
@@ -34,7 +34,7 @@ export const coinPriceFormat = (price) => {
 }
 
 // Change percent type
-export const percentFormat = (num) => {
+export const percentFormat = (num: any) => {
   if (typeof num === "number") {
     return (Math.abs(num - 1) * 100).toFixed(2) + '%';
   }
@@ -44,7 +44,7 @@ export const percentFormat = (num) => {
 }
 
 // Change percent type
-export const normalPercentFormat = (num) => {
+export const normalPercentFormat = (num: any) => {
   if (typeof num === "number") {
     return num.toFixed(2) + '%';
   } else {
@@ -53,7 +53,7 @@ export const normalPercentFormat = (num) => {
 }
 
 // marketCap format
-export const marketCapFormat = (num) => {
+export const marketCapFormat = (num: any) => {
   if (typeof num === "number") {
     if (num >= 1000000000) {
       return '$' + (num / 1000000000).toFixed(2) + "B";

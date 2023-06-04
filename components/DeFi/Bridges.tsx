@@ -51,11 +51,15 @@ const Bridges: FC = () => {
   const [showCountOption, setShowCountOption] = useState<number>(filter.showCount[0]);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [tableData, setTableData] = useState();
+  const [tableData, setTableData] = useState({
+    columns,
+    rows: [],
+    totalPages: 0,
+  });
 
   const drawTable = useCallback(
     (data: any) => {
-      let newData = {
+      let newData: any = {
         columns,
         rows: [],
         totalPages: 0,
@@ -95,7 +99,7 @@ const Bridges: FC = () => {
   }, [fetchData]);
 
   const handleSelectOption = (event: ChangeEvent<HTMLSelectElement>, selectType: string) => {
-    const { value } = event.target;
+    const { value } = event.target as any;
     switch (selectType) {
       case "showCount":
         setShowCountOption(value);
@@ -128,7 +132,7 @@ const handlePageClick = ({ selected: selectedPage }: { selected: number}) => {
       <div className="mt-5">
         <DaisugiTable tableData={tableData} isLoading={isLoading} />
         <ReactPaginate
-          pageCount={tableData.totalPages}
+          pageCount={tableData?.totalPages}
           pageRangeDisplayed={3}
           marginPagesDisplayed={2}
           onPageChange={handlePageClick}

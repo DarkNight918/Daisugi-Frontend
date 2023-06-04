@@ -7,9 +7,16 @@ type Column = {
   align: 'left' | 'right' | 'center';
 }
 
+type ColumnItem = {
+  header: string;
+  name: string;
+  align: string;
+}
+
 type TableData = {
-  columns?: Column[];
-  rows?: (string | number)[][];
+  columns: ColumnItem[];
+  rows: any;
+  totalPages: number;
 }
 
 type TableProps = {
@@ -48,13 +55,13 @@ const Table: FC<TableProps> = ({ tableOption = {}, tableData, isLoading }) => {
           </tr>
         ) : (
           tableData.rows &&
-          tableData.rows.map((row, key) => {
+          tableData.rows.map((row: any, key: number) => {
             return (
               <tr
                 key={key}
                 className="text-white text-center hover:brightness-125"
               >
-                {row.map((item, i) => {
+                {row.map((item: any, i: number) => {
                   return (
                     <td
                       key={i}

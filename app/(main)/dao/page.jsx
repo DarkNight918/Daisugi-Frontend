@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "@/components/Layout";
 import DaisugiTable from "@/components/DaisugiTable";
 
 const filter = {

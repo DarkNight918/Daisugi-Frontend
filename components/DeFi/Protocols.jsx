@@ -85,7 +85,7 @@ const Protocols = () => {
         data.forEach((row, rowIndex) => {
           newData.rows.push([
             showCountOption * currentPage + (rowIndex + 1),
-            <div className="flex gap-4 items-center">
+            <div key={rowIndex} className="flex gap-4 items-center">
               <ImageWithFallback
                 src={row.logo}
                 fallback="/img/CoinImages/blank.png"
@@ -95,7 +95,7 @@ const Protocols = () => {
             </div>,
             row.category,
             row.chain,
-            <div className="relative w-full h-full">
+            <div key={rowIndex} className="relative w-full h-full">
               <div className="flex gap-1 w-5">
                 {row.chains
                   .filter((_, key) => key < 3)
@@ -144,16 +144,19 @@ const Protocols = () => {
               )}
             </div>,
             <div
+              key={rowIndex}
               className={`text-[${row.change_1d > 0 ? "#80FF9C" : "#FF8080"}]`}
             >
               {normalPercentFormat(row.change_1h)}
             </div>,
             <div
+              key={rowIndex}
               className={`text-[${row.change_1d > 0 ? "#80FF9C" : "#FF8080"}]`}
             >
               {normalPercentFormat(row.change_1d)}
             </div>,
             <div
+              key={rowIndex}
               className={`text-[${row.change_1d > 0 ? "#80FF9C" : "#FF8080"}]`}
             >
               {normalPercentFormat(row.change_7d)}
@@ -165,7 +168,7 @@ const Protocols = () => {
       newData.totalPages = data.totalPages;
       setTableData(newData);
     },
-    [showCountOption, currentPage]
+    [showCountOption, currentPage, handleExpendView]
   );
 
   const fetchData = useCallback(async () => {

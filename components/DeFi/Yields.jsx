@@ -76,7 +76,7 @@ const Yields = () => {
         data.data.forEach((row, key) => {
           newData.rows.push([
             showCountOption * currentPage + (key + 1),
-            <div className="flex items-center gap-4">
+            <div key={key} className="flex items-center gap-4">
               {row.symbol && (
                 <ImageWithFallback
                   src={`https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/32/${row.symbol.toLowerCase()}.png`}
@@ -87,7 +87,7 @@ const Yields = () => {
               )}
               {row.symbol}
             </div>,
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4" key={key}>
               <img
                 src={`https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/32/${
                   chainImages[row.chain.toLowerCase()]

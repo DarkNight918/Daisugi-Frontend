@@ -80,7 +80,7 @@ const Fees = () => {
         data.forEach((row, rowIndex) => {
           newData.rows.push([
             showCountOption * currentPage + (rowIndex + 1),
-            <div className="flex gap-4 items-center">
+            <div key={rowIndex} className="flex gap-4 items-center">
               <ImageWithFallback
                 src={row.logo}
                 fallback="/img/CoinImages/blank.png"
@@ -90,7 +90,7 @@ const Fees = () => {
             </div>,
             row.category,
             row.chain,
-            <div className="relative w-full h-full">
+            <div key={rowIndex} className="relative w-full h-full">
               <div className="flex gap-1 w-5">
                 {row.chains
                   .filter((_, key) => key < 3)

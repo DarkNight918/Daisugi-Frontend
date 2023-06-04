@@ -1,4 +1,4 @@
-export default ({
+const ProgressBar = ({
   options = {
     parentClasses: '',
   }, 
@@ -10,3 +10,5 @@ export default ({
     </div>
   )
 }
+
+export default ProgressBar

@@ -31,7 +31,7 @@ type TableRow = {
 }
 type TableData = {
   columns: ColumnItem[];
-  rows: (string | JSX.Element)[][];
+  rows: any;
   totalPages: number;
 }
 
@@ -99,6 +99,55 @@ const Liquidation: FC = () => {
   const [tableData, setTableData] = useState<TableData>({ columns: [], rows: [], totalPages: 0 });
 
   useEffect(() => {
+    const drawTable = (data: { [key: string]: TableRow[], totalPages: any }) => {
+      let newData: TableData = {
+        columns,
+        rows: [],
+        totalPages: 0,
+      };
+      if (data[gainerLoserOption].length) {
+        data[gainerLoserOption].map((row: any, key) => {
+          newData.rows.push([
+            showCountOption * currentPage + (key + 1),
+            <div key={key}>
+              <img
+                src={row.imgURL}
+                className="inline-block w-[1.5rem] h-[1.5rem] mr-3"
+                alt="CoinIcon"
+              />
+              {row.symbol}
+            </div>,
+            row.name,
+            coinPriceFormat(row.price),
+            row.marketCap,
+            <div
+              key={key}
+              className={`flex items-center justify-center text-[#${
+                row[filter.timeChanged[timeChangedOption].name] >= 1
+                  ? "80FF9C"
+                  : "FF8080"
+              }]`}
+            >
+              <i
+                className={`text-xl fa fa-sort-${
+                  row[filter.timeChanged[timeChangedOption].name] >= 1
+                    ? "up"
+                    : "down"
+                } ${
+                  row[filter.timeChanged[timeChangedOption].name] >= 1
+                    ? "mt-2"
+                    : "-mt-2"
+                } mr-2`}
+              />
+              {percentFormat(row[filter.timeChanged[timeChangedOption].name])}
+            </div>,
+          ]);
+        });
+      }
+      newData.totalPages = data.totalPages;
+      setTableData(newData);
+    };
+    
     const fetchData = async () => {
       setIsLoading(true);
       const response = await axios.get(
@@ -112,60 +161,12 @@ const Liquidation: FC = () => {
     fetchData();
   }, [gainerLoserOption, timeChangedOption, showCountOption, currentPage]);
 
-  const drawTable = (data: { [key: string]: TableRow[], totalPages: number }) => {
-    let newData: TableData = {
-      columns,
-      rows: [],
-      totalPages: 0,
-    };
-    if (data[gainerLoserOption].length) {
-      data[gainerLoserOption].map((row, key) => {
-        newData.rows.push([
-          showCountOption * currentPage + (key + 1),
-          <div>
-            <img
-              src={row.imgURL}
-              className="inline-block w-[1.5rem] h-[1.5rem] mr-3"
-              alt="CoinIcon"
-            />
-            {row.symbol}
-          </div>,
-          row.name,
-          coinPriceFormat(row.price),
-          row.marketCap,
-          <div
-            className={`flex items-center justify-center text-[#${
-              row[filter.timeChanged[timeChangedOption].name] >= 1
-                ? "80FF9C"
-                : "FF8080"
-            }]`}
-          >
-            <i
-              className={`text-xl fa fa-sort-${
-                row[filter.timeChanged[timeChangedOption].name] >= 1
-                  ? "up"
-                  : "down"
-              } ${
-                row[filter.timeChanged[timeChangedOption].name] >= 1
-                  ? "mt-2"
-                  : "-mt-2"
-              } mr-2`}
-            />
-            {percentFormat(row[filter.timeChanged[timeChangedOption].name])}
-          </div>,
-        ]);
-      });
-    }
-    newData.totalPages = data.totalPages;
-    setTableData(newData);
-  };
-
   const handleGainLoserOption = (status: "gainers" | "losers") => {
     setGainerLoserOption(status);
   };
 
   const handleSelectOption = (event: ChangeEvent<HTMLSelectElement>, selectType: string) => {
-    const { value } = event.target;
+    const { value } = event.target as any;
     switch (selectType) {
       case "timeChanged":
         setTimeChangedOption(value);

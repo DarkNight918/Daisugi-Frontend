@@ -127,18 +127,18 @@ const tableData = {
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'0-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'0-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'0-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'0-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -153,25 +153,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'0-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'1-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'1-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'1-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'1-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -186,25 +186,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'1-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'2-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'2-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'2-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'2-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -219,25 +219,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'2-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'3-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'3-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'3-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'3-4'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -252,25 +252,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'3-5'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'4-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'4-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'4-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'4-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -285,25 +285,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'4-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'5-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'5-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'5-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'5-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -318,25 +318,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'5-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'6-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'6-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'6-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'6-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -351,25 +351,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'6-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'7-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'7-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'7-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'7-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -384,25 +384,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'7-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'8-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'8-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'8-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'8-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -417,25 +417,25 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'8-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],
     [
       "Avalance AVAX",
       "$58.3k",
-      <label className="text-red-300">
+      <label key={'9-0'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'9-1'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
-      <label className="text-red-300">
+      <label key={'9-2'} className="text-red-300">
         <i className="fa fa-sort-down" /> 0.04%
       </label>,
       "$5,656,087,725",
       "$165,585,252",
-      <div>
+      <div key={'9-3'}>
         <label className="block text-left text-sm">
           34,025,379,637,657 VVS
         </label>
@@ -450,7 +450,7 @@ const tableData = {
           <label className="ml-3 text-[0.6rem]">VVS</label>
         </div>
       </div>,
-      <div className="max-w-[250px] h-[1rem] m-auto">
+      <div key={'9-4'} className="max-w-[250px] h-[1rem] m-auto">
         <LineChart data={lineChartData1} />
       </div>,
     ],

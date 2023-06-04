@@ -55,7 +55,7 @@ const StableCoins = () => {
         data.data.forEach((row, key) => {
           newData.rows.push([
             showCountOption * currentPage + (key + 1),
-            <div>
+            <div key={key}>
               <img
                 src={row.imgURL}
                 className="inline-block w-[1.5rem] h-[1.5rem] mr-3"

@@ -29,7 +29,7 @@ const Goal: FC = () => {
         <div className='rounded-[34px] border-2 border-gray-600 p-10 hover:border-white text-white cursor-pointer transition ease-in-out'>
           <p className='text-2xl font-bold'>Social Feed</p>
           <p className='mt-4 text-[14px]'>
-            Live feed containing curated news, wallets & projects. See project updates, notifications, trending posts, conversations & threads. Track the top hedge funds, DAOs, and VC funds. Connect your Twitter to analyze and view your peers' positions and trades.
+            Live feed containing curated news, wallets & projects. See project updates, notifications, trending posts, conversations & threads. Track the top hedge funds, DAOs, and VC funds. Connect your Twitter to analyze and view your peers&apos; positions and trades.
           </p>
           <div className='flex gap-4 mt-6 text-[14px] items-center hover:opacity-[0.5] transition ease-in-out cursor-pointer'>
             <p>Learn More</p>

@@ -1,5 +1,5 @@
 export const authHeader = () => {
-    let user = JSON.parse(localStorage.getItem('user'));
+    let user = JSON.parse(localStorage.getItem('user') || '');
 
     if (user && user.token){
         return {
@@ -12,7 +12,7 @@ export const authHeader = () => {
     }
 }
 
-export const handleResponse = async (response, onError) => {
+export const handleResponse = async (response: any, onError: any) => {
     const res = await response;
     const text = await res.text();
 
